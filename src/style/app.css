@@ -1,0 +1,153 @@
+/* :root {
+  --color-primary: #222831;
+  --color-secondary: #393e46;
+  --color-accent: #32e0c4;
+  --font-color: #eeeeee;
+  --color-error: #f05454;
+} */
+
+/* :root {
+  --color-primary: #1D1D20;
+  --color-secondary: #3A3A40;
+  --color-accent: #06D6A0;
+  --font-color: #EEEEEE;
+  --color-error: #f05454;
+} */
+
+/* :root {
+  --color-primary: #232931;
+  --color-secondary: #393e46;
+  --color-primary-accent: #4ecca3;
+  --color-secondary-accent: #E0E0E0;
+  --font-color: #eeeeee;
+  --color-error: #f05454;
+} */
+
+:root {
+  --color-primary: #26282b;
+  --color-secondary: #353941;
+  --color-primary-accent: #34D1BF;
+  --color-secondary-accent: #E0E0E0;
+  --font-color: #EFEFEF;
+  --color-error: #f05454;
+}
+
+
+#tab-manager-root {
+  font-size: 16px !important;
+}
+
+.active {
+  color: var(--color-primary-accent);
+}
+
+.disabled {
+  color: var(--color-secondary);
+}
+
+.tab-manager-hoverable:hover {
+  cursor: pointer;
+}
+
+#tab-manager {
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 9999;
+  background: var(--color-primary);
+  overflow-y: scroll;
+}
+
+#tab-manager * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#tab-manager.hiddennn {
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: -20%;
+
+  transition: all .2s !important;
+}
+
+#tab-manager.shownnn {
+  top: 0;
+  right: 80%;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+
+  transition: all .2s !important;
+}
+
+#tab-manager-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
+#tab-manager-header #search-bar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 8px;
+  background: var(--color-secondary);
+  color: var(--font-color);
+  border-radius: 10px;
+  border: none;
+}
+
+#tab-manager-header .icon {
+  margin: 5px;
+  transition: color .2s;
+}
+
+#tab-manager-header #exit-icon:hover {
+  color: var(--color-error);
+}
+
+.tab {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+  font-size: .85em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  background: var(--font-color);
+  color: var(--color-secondary);
+
+  transition: all .2s !important;
+}
+
+.tab .tab-title {
+  width: 75%;
+
+  /* gradient text */
+  /* background-color: var(--color-secondary);
+  background-image: linear-gradient(90deg, rgba(2,0,36,0) 95%, rgba(239,239,239,1) 98%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  */
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab:hover {
+  background: var(--color-secondary-accent);
+}
+
+.tab .tab-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
